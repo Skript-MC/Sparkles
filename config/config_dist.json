@@ -1,0 +1,16 @@
+{
+  "domain": "skript-mc.fr",
+  "address": "",
+  "redirect": "",
+  "groups": [4, 10, 18, 7],
+  "store_key": "",
+  "cookie_key": "",
+  "oauth": {
+    "auth_url":  "https://skript-mc.fr/oauth/authorize/",
+    "token_url": "https://skript-mc.fr/oauth/token/",
+    "redirect_url": "https://sparkles.skript-mc.fr/callback",
+    "client_id": "",
+    "client_secret": "",
+    "scopes": ["profile", "email"]
+  }
+}
