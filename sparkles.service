@@ -1,0 +1,12 @@
+[Unit]
+Description=Sparkles service
+
+[Service]
+Type=notify
+ExecStart=/home/sparkles/sparkles
+WorkingDirectory=/home/sparkles
+WatchdogSec=30s
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
