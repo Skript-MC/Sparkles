@@ -14,23 +14,22 @@ server {
 
 
         location / {
-        		auth_request /validate;
-    			  error_page 401 = @error401;
-            
-            try_files  $uri $uri/ /index.php?$args;
+       		auth_request /validate;
+    		error_page 401 = @error401;
+               try_files  $uri $uri/ /index.php?$args;
         }
 
        	location = /validate {
-          internal;
-          proxy_set_header Host $host;
-          proxy_pass_request_body off;
-          proxy_set_header Content-Length "";
+        	internal;
+          	proxy_set_header Host $host;
+          	proxy_pass_request_body off;
+          	proxy_set_header Content-Length "";
 
-          proxy_pass http://127.0.0.1:3000;
+          	proxy_pass http://127.0.0.1:3000;
         }
 
-	    location @error401 {
-        		return 302 https://sparkles.skript-mc.fr/login;
+	location @error401 {
+        	return 302 https://sparkles.skript-mc.fr/login;
     	}
 
 }
@@ -46,7 +45,7 @@ server {
     error_log /var/log/nginx/sparkles.skript-mc.fr.log warn;
 
     location / {
-        proxy_set_header Host $http_host;
+    	proxy_set_header Host $http_host;
         proxy_pass http://127.0.0.1:3000;
     }
 
