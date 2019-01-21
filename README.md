@@ -16,7 +16,7 @@ server {
         location / {
        		auth_request /validate;
     		error_page 401 = @error401;
-               try_files  $uri $uri/ /index.php?$args;
+               	try_files  $uri $uri/ /index.php?$args;
         }
 
        	location = /validate {
