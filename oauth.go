@@ -74,7 +74,7 @@ func Callback(c *gin.Context) {
 	}
 
 	client := conf.Client(ctx, tok)
-	response, err := client.Get("https://skript-mc.fr/api/core/me")
+	response, err := client.Get("https://skript-mc.fr/forum/api/core/me")
 
 	if err != nil {
 		c.HTML(http.StatusUnauthorized, "error.html", gin.H{
